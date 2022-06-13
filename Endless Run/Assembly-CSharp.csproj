@@ -56,10 +56,11 @@
     <Analyzer Include="C:\Program Files\Microsoft Visual Studio\2022\Community\Common7\IDE\Extensions\Microsoft\Visual Studio Tools for Unity\Analyzers\Microsoft.Unity.Analyzers.dll" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Assets\Script\Road\CreateRoad.cs" />
-    <Compile Include="Assets\Script\Road\MoveRoad.cs" />
-    <Compile Include="Assets\Script\Road\SkyRotation.cs" />
+    <Compile Include="Assets\Script\SkyRotation.cs" />
     <Compile Include="Assets\Script\Character\Control.cs" />
+    <Compile Include="Assets\Script\Road\RoadManager.cs" />
+    <Compile Include="Assets\Script\Obstacle\Obstacle.cs" />
+    <Compile Include="Assets\Script\Obstacle\ObstacleCreate.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\Free Stylized Skybox\ReadMe.txt" />

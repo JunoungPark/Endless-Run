@@ -5,12 +5,11 @@ using UnityEngine;
 public class Control : MonoBehaviour
 {
     public int count = 0;
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
 
+    public Animator animator;
+
+    // Start is called before the first frame update
+    
     // Update is called once per frame
     void Update()
     {
@@ -25,4 +24,12 @@ public class Control : MonoBehaviour
             transform.position += Vector3.right;
         }
     }
+    private void OnCollisionEnter(Collision collision)
+    {
+        if (collision.gameObject.tag == "Tire Stack")
+        {
+            animator.SetTrigger("Death");
+        }
+    }
+
 }

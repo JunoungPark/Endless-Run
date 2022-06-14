@@ -11,4 +11,10 @@ public class Obstacle : MonoBehaviour
     {
         transform.Translate(Vector3.back * speed * Time.deltaTime);
     }
+    private void OnBecameInvisible()
+    {
+        ObjectPooling.objectPool.InsertQueue(gameObject);
+        transform.position = new Vector3(transform.position.x, transform.position.y, 5);
+    }
+
 }

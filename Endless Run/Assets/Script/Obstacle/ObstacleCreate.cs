@@ -5,22 +5,16 @@ using UnityEngine;
 public class ObstacleCreate : MonoBehaviour
 {
 
+
+    public GameObject obstacle;
+
     private void OnTriggerEnter(Collider other)
     {
         if (other.name == "Character")
         {
-            Debug.Log("충돌 되었습니다.");
+            ObjectPooling.objectPool.GetQueue();
         }
     }
     // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
 }

@@ -38,7 +38,7 @@ public class RoadManager : MonoBehaviour
     }
     void RoadMove()
     {
-        for(int i = 0; i < roadList.Count; i++)
+        for (int i = 0; GameManager.instance.condtion == true && i < roadList.Count; i++)
         {
             roadList[i].transform.Translate(-Vector3.forward * speed * Time.deltaTime);
         }

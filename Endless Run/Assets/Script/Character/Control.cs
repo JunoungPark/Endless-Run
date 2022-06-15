@@ -13,21 +13,26 @@ public class Control : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.LeftArrow) && count > -2)
+        if (GameManager.instance.condtion == true)
         {
-            count--;
-            transform.position += Vector3.left;
-        }
-        if (Input.GetKeyDown(KeyCode.RightArrow) && count < 2)
-        {
-            count++;
-            transform.position += Vector3.right;
+            if (Input.GetKeyDown(KeyCode.LeftArrow) && count > -2)
+            {
+                count--;
+                transform.position += Vector3.left;
+            }
+            if (Input.GetKeyDown(KeyCode.RightArrow) && count < 2)
+            {
+                count++;
+                transform.position += Vector3.right;
+            }
         }
     }
-    private void OnCollisionEnter(Collision collision)
+    private void OnTriggerEnter(Collider other)
     {
-        if (collision.gameObject.tag == "Tire Stack")
+
+        if (other.gameObject.tag == "Tire Stack")
         {
+            GameManager.instance.condtion = false;
             animator.SetTrigger("Death");
         }
     }

@@ -34,6 +34,7 @@ public class Control : MonoBehaviour
         {
             GameManager.instance.condtion = false;
             animator.SetTrigger("Death");
+            UIManager.instance.UIActive();
         }
     }
 

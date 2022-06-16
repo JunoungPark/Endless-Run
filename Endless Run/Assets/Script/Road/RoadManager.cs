@@ -9,8 +9,6 @@ public class RoadManager : MonoBehaviour
 
     GameObject nextroad;
 
-    public float speed;
-
     List<GameObject> roadList;
     // Start is called before the first frame update
 
@@ -40,7 +38,7 @@ public class RoadManager : MonoBehaviour
     {
         for (int i = 0; GameManager.instance.condtion == true && i < roadList.Count; i++)
         {
-            roadList[i].transform.Translate(-Vector3.forward * speed * Time.deltaTime);
+            roadList[i].transform.Translate(-Vector3.forward * GameManager.instance.gamespeed * Time.deltaTime);
         }
 
         if (roadList[lastRoad].transform.position.z < -21)

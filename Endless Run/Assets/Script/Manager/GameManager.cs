@@ -8,6 +8,8 @@ public class GameManager : MonoBehaviour
 
     public bool condtion = true;
 
+    public float gamespeed = 10f;
+
     private void Awake()
     {
         if (instance == null)
@@ -21,5 +23,6 @@ public class GameManager : MonoBehaviour
             Destroy(instance);
         }
     }
+    
     // Start is called before the first frame update
 }

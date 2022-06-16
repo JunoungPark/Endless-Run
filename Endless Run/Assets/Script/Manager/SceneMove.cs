@@ -7,6 +7,7 @@ public class SceneMove : MonoBehaviour
     public void SceneNumber(string name)
     {
         SceneManager.LoadScene(name);
+        GameManager.instance.condtion = true;
     }
     // Start is called before the first frame update
 }

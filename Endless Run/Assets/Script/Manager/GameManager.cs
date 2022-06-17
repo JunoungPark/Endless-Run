@@ -8,7 +8,7 @@ public class GameManager : MonoBehaviour
 
     public bool condtion = true;
 
-    public float gamespeed = 10f;
+    public float gamespeed;
 
     private void Awake()
     {

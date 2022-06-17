@@ -12,11 +12,12 @@ public class ObjectPooling : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+
         objectPool = this;
         
         for(int i = 0; i < 5; i++)
         {
-            GameObject obj = Instantiate(tire, new Vector3(0, 0.1f, 10), Quaternion.identity);
+            GameObject obj = Instantiate(tire, new Vector3(0, 0.1f, 55), Quaternion.identity);
             queue.Enqueue(obj);
             obj.SetActive(false);
         }

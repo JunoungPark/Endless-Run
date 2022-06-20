@@ -10,6 +10,7 @@ public class SceneMove : MonoBehaviour
         SceneManager.LoadScene(name);
         GameManager.instance.condtion = true;
         GameManager.instance.gamespeed = 10f;
+        GameManager.instance.crashCount = 0;
     }
     // Start is called before the first frame update
 }

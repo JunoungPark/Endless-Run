@@ -61,6 +61,7 @@
     <Compile Include="Assets\Script\Manager\SkyRotation.cs" />
     <Compile Include="Assets\Script\Manager\UIManager.cs" />
     <Compile Include="Assets\Script\Manager\GameManager.cs" />
+    <Compile Include="Assets\Script\Manager\DataManager.cs" />
     <Compile Include="Assets\Script\Obstacle\ObstacleActive.cs" />
     <Compile Include="Assets\Script\Character\Control.cs" />
     <Compile Include="Assets\Script\Manager\SoundManager.cs" />

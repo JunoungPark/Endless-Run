@@ -19,7 +19,7 @@ public class RoadManager : MonoBehaviour
     {
         roadList = new List<GameObject>();
 
-        for (int i = 0; i < 61; i += 30)
+        for (int i = 0; i < 121; i += 30)
         {
             roadList.Add(Instantiate(road, new Vector3(0, 0, i), Quaternion.identity));
         }

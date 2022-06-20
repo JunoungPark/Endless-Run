@@ -34,6 +34,8 @@ public class Control : MonoBehaviour
 
         if (other.gameObject.tag == "Tire Stack")
         {
+            DataManager.instance.Save();
+
             SoundManager.instance.SoundCall("Collision");
             GameManager.instance.condtion = false;
             animator.SetTrigger("Death");

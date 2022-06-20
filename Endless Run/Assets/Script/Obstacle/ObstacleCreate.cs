@@ -14,7 +14,15 @@ public class ObstacleCreate : MonoBehaviour
         {
             SoundManager.instance.SoundCall("LevelDesign");
             ObjectPooling.objectPool.GetQueue();
-            GameManager.instance.gamespeed ++;
+            if (GameManager.instance.gamespeed < 95)
+            {
+                GameManager.instance.gamespeed++;
+            }
+            GameManager.instance.crashCount ++;
+            if (GameManager.instance.crashCount % 10 == 0)
+            {
+                DataManager.instance.level++;
+            }
         }
 
         

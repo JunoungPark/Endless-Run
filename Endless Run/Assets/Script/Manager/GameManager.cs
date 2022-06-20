@@ -10,6 +10,7 @@ public class GameManager : MonoBehaviour
 
     public float gamespeed;
 
+    public int crashCount = 0;
     private void Awake()
     {
         if (instance == null)

@@ -6,7 +6,7 @@ public class SceneMove : MonoBehaviour
 {
     public void SceneNumber(string name)
     {
-
+        Time.timeScale = 1;
         SceneManager.LoadScene(name);
         GameManager.instance.condtion = true;
         GameManager.instance.gamespeed = 10f;
